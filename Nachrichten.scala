@@ -32,7 +32,7 @@ object Nachrichten {
 
   def getNews(url: String) = {
     cleaner.clean(new URL(url)).getElementsByAttValue("class", "longText", true, true).headOption map {
-      _.getChildTags map { _.getText.toString } reduce { _ + _ }
+      _.getChildTags map { _.getText.toString } reduce { _ + System.lineSeparator + _ }
     }
   }
 
