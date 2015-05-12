@@ -5,4 +5,7 @@ on my ereader.
 
 ## Running the script
 
-`sbt "run <destination>"` will handle the dependencies.
+`sbt "run <destination>"` will run the script and handle the dependencies.
+
+The `helper.sh` script takes care of mounting/unmounting the reader, and
+uses today's date for the file name.
